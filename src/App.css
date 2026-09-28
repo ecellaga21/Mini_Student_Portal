@@ -1,0 +1,655 @@
+/* ========================================
+   MINI STUDENT PORTAL
+   AESTHETIC PINK THEME
+======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+  min-height: 100vh;
+
+  /* Aesthetic soft pink background */
+  background:
+    radial-gradient(circle at 10% 15%, rgba(255, 182, 193, 0.35), transparent 28%),
+    radial-gradient(circle at 90% 20%, rgba(244, 194, 194, 0.35), transparent 30%),
+    radial-gradient(circle at 50% 100%, rgba(255, 218, 224, 0.45), transparent 35%),
+    linear-gradient(135deg, #fff5f7, #fdecef, #f9e4ea);
+
+  color: #4a2935;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* ========================================
+   NAVBAR
+======================================== */
+
+.navbar {
+  width: 100%;
+  min-height: 76px;
+
+  background: rgba(255, 250, 251, 0.92);
+  border-bottom: 1px solid #f2d9df;
+
+  display: flex;
+  align-items: center;
+
+  box-shadow: 0 5px 25px rgba(157, 78, 101, 0.08);
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  backdrop-filter: blur(12px);
+}
+
+.nav-container {
+  width: 100%;
+  max-width: 1150px;
+  margin: auto;
+  padding: 0 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #a94f70;
+  letter-spacing: -0.3px;
+}
+
+/* Navigation */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-link {
+  text-decoration: none;
+
+  color: #765361;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  padding: 11px 18px;
+  border-radius: 12px;
+
+  transition: all 0.25s ease;
+}
+
+.nav-link:hover {
+  background: #fbe8ed;
+  color: #a94f70;
+}
+
+.nav-link.active {
+  background: linear-gradient(
+    135deg,
+    #d97998,
+    #b85c7c
+  );
+
+  color: #ffffff;
+
+  box-shadow:
+    0 7px 18px rgba(184, 92, 124, 0.25);
+}
+
+/* ========================================
+   GENERAL PAGE
+======================================== */
+
+.page {
+  min-height: calc(100vh - 76px);
+  width: 100%;
+
+  padding: 55px 20px;
+}
+
+/* ========================================
+   HOME PAGE
+======================================== */
+
+.home-card {
+  width: 850px;
+  max-width: 100%;
+
+  margin: 70px auto;
+
+  padding: 70px 50px;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.88);
+
+  border: 1px solid rgba(235, 192, 204, 0.8);
+
+  border-radius: 28px;
+
+  box-shadow:
+    0 25px 60px rgba(166, 76, 105, 0.12),
+    0 5px 20px rgba(166, 76, 105, 0.05);
+
+  backdrop-filter: blur(10px);
+}
+
+/* Badge */
+
+.badge {
+  display: inline-block;
+
+  padding: 9px 18px;
+  margin-bottom: 24px;
+
+  background: #fbe6ec;
+
+  color: #a94f70;
+
+  border: 1px solid #f3ccd8;
+
+  border-radius: 50px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+/* Home title */
+
+.home-card h1 {
+  color: #512f3d;
+
+  font-size: 42px;
+  line-height: 1.2;
+
+  margin-bottom: 18px;
+}
+
+/* Home paragraph */
+
+.home-card p {
+  max-width: 650px;
+  margin: 0 auto 30px;
+
+  color: #795b67;
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+.btn {
+  border: none;
+
+  border-radius: 12px;
+
+  padding: 12px 20px;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+/* Main pink button */
+
+.btn-primary {
+  background: linear-gradient(
+    135deg,
+    #d97998,
+    #b85c7c
+  );
+
+  color: #ffffff;
+
+  box-shadow:
+    0 9px 20px rgba(184, 92, 124, 0.22);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 13px 25px rgba(184, 92, 124, 0.30);
+}
+
+/* ========================================
+   FORM CARD
+======================================== */
+
+.form-card {
+  width: 100%;
+  max-width: 850px;
+
+  margin: 0 auto;
+
+  background: rgba(255, 255, 255, 0.91);
+
+  border: 1px solid #f0d6de;
+
+  border-radius: 24px;
+
+  padding: 42px;
+
+  box-shadow:
+    0 20px 50px rgba(166, 76, 105, 0.10);
+
+  backdrop-filter: blur(10px);
+}
+
+.form-card h2 {
+  color: #512f3d;
+
+  font-size: 30px;
+
+  margin-bottom: 8px;
+}
+
+.form-subtitle {
+  color: #876773;
+
+  font-size: 15px;
+
+  margin-bottom: 32px;
+}
+
+/* ========================================
+   FORM GROUP
+======================================== */
+
+.form-group {
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  display: block;
+
+  color: #5a3645;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  height: 52px;
+
+  padding: 0 16px;
+
+  border: 1px solid #e8cbd4;
+
+  border-radius: 12px;
+
+  background: #fffafb;
+
+  color: #573744;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition: all 0.25s ease;
+}
+
+.form-group input::placeholder {
+  color: #b99aa5;
+}
+
+.form-group input:hover,
+.form-group select:hover {
+  border-color: #dca0b4;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #cf718f;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 4px rgba(207, 113, 143, 0.12);
+}
+
+/* ========================================
+   INPUT HINT & ERROR
+======================================== */
+
+.input-hint {
+  color: #987480;
+
+  font-size: 13px;
+
+  margin-top: 7px;
+}
+
+.error {
+  color: #c94d6d;
+
+  font-size: 13px;
+
+  margin-top: 7px;
+}
+
+/* ========================================
+   STUDENTS PAGE
+======================================== */
+
+.students-card {
+  width: 100%;
+  max-width: 1050px;
+
+  margin: 0 auto;
+
+  background: rgba(255, 255, 255, 0.91);
+
+  border: 1px solid #f0d6de;
+
+  border-radius: 24px;
+
+  padding: 35px;
+
+  box-shadow:
+    0 20px 50px rgba(166, 76, 105, 0.10);
+
+  backdrop-filter: blur(10px);
+}
+
+/* Header */
+
+.students-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 28px;
+}
+
+.students-header h2 {
+  color: #512f3d;
+
+  font-size: 30px;
+}
+
+.students-header p {
+  color: #876773;
+
+  font-size: 14px;
+
+  margin-top: 6px;
+}
+
+/* ========================================
+   STUDENT LIST
+======================================== */
+
+.student-list {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 18px;
+}
+
+/* Student item */
+
+.student-item {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 22px;
+
+  background: rgba(255, 250, 251, 0.95);
+
+  border: 1px solid #efd5dd;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 7px 20px rgba(166, 76, 105, 0.06);
+
+  transition: all 0.25s ease;
+}
+
+.student-item:hover {
+  transform: translateY(-3px);
+
+  border-color: #dfacbc;
+
+  box-shadow:
+    0 12px 28px rgba(166, 76, 105, 0.12);
+}
+
+/* Student information */
+
+.student-info {
+  min-width: 0;
+}
+
+.student-info h3 {
+  color: #5a3343;
+
+  font-size: 18px;
+
+  margin-bottom: 10px;
+}
+
+.student-info p {
+  color: #80616d;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+/* ========================================
+   EMPTY STATE
+======================================== */
+
+.empty-state {
+  text-align: center;
+
+  background: rgba(255, 250, 251, 0.95);
+
+  border: 1px solid #efd5dd;
+
+  border-radius: 18px;
+
+  padding: 55px 25px;
+}
+
+.empty-state h3 {
+  color: #5a3343;
+
+  font-size: 22px;
+
+  margin-bottom: 9px;
+}
+
+.empty-state p {
+  color: #896b76;
+
+  font-size: 15px;
+
+  line-height: 1.6;
+}
+
+/* ========================================
+   READ ONLY INPUT
+======================================== */
+
+.form-group input[readonly] {
+  background: #fdf1f4;
+
+  color: #765361;
+
+  cursor: default;
+}
+
+/* ========================================
+   CANCEL BUTTON
+======================================== */
+
+.btn:not(.btn-primary) {
+  background: #f8e7ec !important;
+
+  color: #a65372 !important;
+
+  border: 1px solid #efd0da;
+}
+
+.btn:not(.btn-primary):hover {
+  background: #f4dce4 !important;
+
+  color: #91435f !important;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 850px) {
+
+  .nav-container {
+    padding: 0 20px;
+  }
+
+  .home-card {
+    margin: 35px auto;
+
+    padding: 55px 30px;
+  }
+
+  .home-card h1 {
+    font-size: 34px;
+  }
+
+  .student-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+
+  .navbar {
+    position: relative;
+  }
+
+  .nav-container {
+    padding: 18px 20px;
+
+    flex-direction: column;
+
+    gap: 15px;
+  }
+
+  .nav-links {
+    width: 100%;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+  }
+
+  .page {
+    padding: 30px 15px;
+  }
+
+  .home-card {
+    padding: 45px 22px;
+  }
+
+  .home-card h1 {
+    font-size: 29px;
+  }
+
+  .home-card p {
+    font-size: 15px;
+  }
+
+  .form-card {
+    padding: 28px 20px;
+  }
+
+  .students-card {
+    padding: 22px 18px;
+  }
+
+  .students-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .student-item {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 450px) {
+
+  .logo {
+    font-size: 19px;
+  }
+
+  .nav-link {
+    font-size: 13px;
+
+    padding: 9px 12px;
+  }
+
+  .home-card h1 {
+    font-size: 26px;
+  }
+
+  .form-card h2,
+  .students-header h2 {
+    font-size: 25px;
+  }
+
+  .student-item > div:last-child {
+    width: 100%;
+
+    display: flex;
+  }
+
+  .student-item > div:last-child .btn {
+    flex: 1;
+  }
+}
